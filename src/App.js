@@ -1,7 +1,14 @@
+import Formulario from "./components/Formulario";
+import Header from "./components/Header";
+
 function App() {
   return (
     <>
-      <h1>buscador noticias</h1>
+      <Header titulo="Buscador de Noticias" />
+
+      <div className="container white">
+        <Formulario />
+      </div>
     </>
   );
 }
