@@ -2,8 +2,19 @@ import styles from "./Formulario.module.css";
 import useSelect from "../hooks/useSelect";
 
 const Formulario = () => {
+  //creandop categorias de busqueda según API
+  const OPCIONES = [
+    { value: "general", label: "General" },
+    { value: "business", label: "Negocios" },
+    { value: "entertainment", label: "Entretenimiento" },
+    { value: "health", label: "Slaud" },
+    { value: "science", label: "Ciencia" },
+    { value: "sports", label: "Deportes" },
+    { value: "technology ", label: "Tecnología" },
+  ];
+
   //Utilizamos custom hook
-  const [categoria, SelectNoticias] = useSelect();
+  const [categoria, SelectNoticias] = useSelect("general", OPCIONES);
 
   return (
     <div className={`${styles.buscador} row`}>
