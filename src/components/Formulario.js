@@ -1,5 +1,6 @@
 import styles from "./Formulario.module.css";
 import useSelect from "../hooks/useSelect";
+import PropTypes from "prop-types";
 
 const Formulario = ({ setCategoria }) => {
   //creandop categorias de busqueda según API
@@ -23,7 +24,7 @@ const Formulario = ({ setCategoria }) => {
 
   return (
     <div className={`${styles.buscador} row`}>
-      <div className="col s12 m8 offset-m2">
+      <div className="col s12 m10 offset-m1">
         <form onSubmit={buscarNoticias}>
           <h2 className={styles.heading}>Encuentra Noticias por Categoría</h2>
 
@@ -40,6 +41,10 @@ const Formulario = ({ setCategoria }) => {
       </div>
     </div>
   );
+};
+
+Formulario.propTypes = {
+  setCategoria: PropTypes.func.isRequired,
 };
 
 export default Formulario;
