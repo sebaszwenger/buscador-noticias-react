@@ -1,6 +1,7 @@
 import Formulario from "./components/Formulario";
 import Header from "./components/Header";
 import { useState, useEffect } from "react";
+import ListadoNoticias from "./components/ListadoNoticias";
 
 function App() {
   //definir la categoria y noticia
@@ -25,6 +26,7 @@ function App() {
 
       <div className="container white">
         <Formulario setCategoria={setCategoria} />
+        <ListadoNoticias noticias={noticias} />
       </div>
     </>
   );
