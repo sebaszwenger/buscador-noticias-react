@@ -10,7 +10,7 @@ const Formulario = ({ setCategoria }) => {
     { value: "health", label: "Slaud" },
     { value: "science", label: "Ciencia" },
     { value: "sports", label: "Deportes" },
-    { value: "technology ", label: "Tecnología" },
+    { value: "technology", label: "Tecnología" },
   ];
 
   //Utilizamos custom hook
